@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Generator Licencji</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#111827">
+  <link rel="icon" href="assets/app/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/app/images/logo.png">
+</head>
+<body style="display:flex;align-items:center;justify-content:center;height:100vh;background:#111827;color:white;font-family:sans-serif;flex-direction:column;">
+  <h1>Generator Licencji</h1>
+  <p>Kliknij przycisk, aby otworzyć panel administratora:</p>
+  <button onclick="window.location.href='https://mobywatel-demonstracja.ct.ws/generator_licencji_klientow_admin.php'"
+          style="padding:15px 25px;font-size:18px;border:none;border-radius:8px;background:#e11d48;color:white;cursor:pointer;">
+    🚀 Otwórz panel admina
+  </button>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js")
+        .then(() => console.log("✅ Service Worker zarejestrowany"))
+        .catch(err => console.error("❌ Błąd SW:", err));
+    }
+  </script>
+</body>
+</html>
